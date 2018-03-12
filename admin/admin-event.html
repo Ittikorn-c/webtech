@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+</head>
+
+<body>
+    <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+        <a class='navbar-brand' href='../home/index_user.html'>Get Event</a>
+
+        <!-- Links -->
+        <ul class='navbar-nav mr-auto'>
+            <li class='nav-item'>
+                <div class='form-inline my-lg-0'>
+
+                </div>
+            </li>
+        </ul>
+        <div id="buttonUser">
+
+        </div>
+    </nav>
+
+    <div class='container-fluid p-0 m-0 row' id='admin-content'>
+        <div class='col-1 p-0'>
+            <div class="container-fluid p-0 btn-group-vertical" id='admin-menu'>
+                <div type="button" class="btn btn-secondary" id='admin-menu-dashboard' onclick="location.href='admin-dashboard.html';">
+                    <a>Dashboard</a>
+                </div>
+                <div type="button" class="btn btn-secondary" id='admin-menu-event' onclick="location.href='admin-event.html';">
+                    <a>Event</a>
+                </div>
+                <div type="button" class="btn btn-secondary" id='admin-menu-users' onclick="location.href='admin-users.html';">
+                    <a>Users</a>
+                </div>
+            </div>
+        </div>
+        <div class='col-11 text-left' style="background-color:rgb(213, 221, 213);">
+            <div class='row col-12' id='dashborad-content'>
+                <h1>Event</h1>
+                &nbsp;
+                <input type="text" id="myInput" placeholder="Search .." title="Type in a name">
+            </div>
+            <div class='row col-12' id='event-content' style="background-color:rgb(157, 221, 157);">
+                <ul class="list-inline row">
+                    &nbsp;
+                    <li>
+                        <a id="event-all" href="#" data-toggle="tooltip">All</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-science" href="#" data-toggle="tooltip">Science</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-business" href="#" data-toggle="tooltip">Business</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-family" href="#" data-toggle="tooltip">Family</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-education" href="#" data-toggle="tooltip">Education</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-hobbies" href="#" data-toggle="tooltip">Hobbies</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-music" href="#" data-toggle="tooltip">Music</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-health" href="#" data-toggle="tooltip">Health</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-community" href="#" data-toggle="tooltip">Community</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-food" href="#" data-toggle="tooltip">Food</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-fashion" href="#" data-toggle="tooltip">Fashion</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-arts" href="#" data-toggle="tooltip">Arts</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-sports" href="#" data-toggle="tooltip">Sports</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-films" href="#" data-toggle="tooltip">Film</a>
+                    </li>
+                    &nbsp;
+                    <a>|</a>
+                    &nbsp;
+                    <li>
+                        <a id="event-charity" href="#" data-toggle="tooltip">Charity</a>
+                    </li>
+                    &nbsp;
+                </ul>
+            </div>
+            <div class='row col-12' id='event-table' style="background-color:rgb(157, 221, 157);">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox" id="parent" />No.
+                            </th>
+                            <th>Event ID</th>
+                            <th>Event Name</th>
+                            <th>Event Category</th>
+                            <th>Date(Y/M/D)</th>
+                            <th>Time</th>
+                            <th>Cost</th>
+                            <th>Seat</th>
+                            <th>Seat Max</th>
+                            <th>User ID</th>
+                        </tr>
+                    </thead>
+                    <tbody id="post-table">
+                        <!-- js call php to write this row -->
+                    </tbody>
+                </table>
+            </div>
+            <div class='row col-12' id='event-button' style="background-color:rgb(157, 221, 157);">
+                <button type="button" class="btn btn-primary" id="event-pdf">Create PDF</button>
+                &nbsp; | &nbsp;
+                <button type="button" class="btn btn-success" id="event-create">Create Event</button>
+                &nbsp; | &nbsp;
+                <button type="button" class="btn btn-danger" id="event-delete">Delete Event</button>
+            </div>
+        </div>
+    </div>
+    <script src="admin-script/admin-event-onload.js"></script>
+    <script src="admin-script/admin-event-delete.js"></script>
+    <script>showHead()</script>
+</body>
+
+</html>

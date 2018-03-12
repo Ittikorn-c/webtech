@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <title>Get Event</title>
+        <meta charset="utf-8">
+        <script src="script/index_user.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index_user.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/timeline.css">
+
+    </head>
+
+    <body>
+        <!-- header -->
+        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+            <a class='navbar-brand' href='index_user.html'>Get Event</a>
+            
+            <!-- Links -->
+            <ul class='navbar-nav mr-auto'>
+            <li class='nav-item'>
+                <div class='form-inline my-lg-0' >
+                    <input class='form-control' type='text' placeholder='Search' id="textsearch">
+                    <button class='btn btn-success' onclick="search()">Search</button>
+                </div>
+            </li>
+            </ul>
+            <div id="buttonUser">
+                
+            </div>
+        </nav>
+        
+        <!-- loginbox -->
+        <div id="loginbox">
+                
+        </div>
+
+        <!-- signupbox -->
+        <div id="signupbox">
+                
+        </div>
+        
+        <!-- supportbox -->
+        <div id="supportbox">
+
+        </div>
+
+        <!-- contant -->
+        <div>
+            <!-- slideshow -->
+            <div id="slideshow">
+
+            </div>
+
+
+            <!-- dropdown -->
+            <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                <form>
+                    <select name="cds" onchange="showEvent('event',this.value)">
+                        <option value="">EXPLORE EVENTS</option>
+                        <option value="science">Science & Tech</a>
+                        <option value="business">Business</a>
+                        <option value="family">Family</a>
+                        <option value="education">Education</a>
+                        <option value="hobbies">Hobbies</a>
+                        <option value="music">Music</a>
+                        <option value="health">Health</a>
+                        <option value="community">Community</a>
+                        <option value="food">Food & Drink</a>
+                        <option value="fashion">Fashion</a>
+                        <option value="arts">Arts</a>
+                        <option value="sports">Sports & Fitness</a>
+                        <option value="film">Film & Media</a>
+                        <option value="charity">Charity & Causes</a>
+                    </select>
+                </form>
+                <button type="button" class="btn btn-primary" id="pbtn">Support</button>
+            </nav>
+        
+            <br>
+
+            <div class="timeline" id="event">
+                <!-- all event -->
+                
+               
+                    
+                    <div>
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <!-- Brand/logo -->
+                            <a class='navbar-brand' href='#'>Science & Tech</a>
+                        </nav>  
+                        <div id="science"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Business</a>
+                        </nav>     
+                        <div id="business"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Family</a>
+                        </nav>   
+                        <div id="family"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >    
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Education</a>
+                        </nav>
+                        <div id="education"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+               
+            
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Hobbies</a>
+                        </nav>
+                        <div id="hobbies"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Music</a>
+                        </nav>
+                        <div id="music"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Health</a>
+                        </nav>
+                            
+                        <div id="health"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Community</a>
+                        </nav>
+                            
+                        <div id="community"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Food & Drink</a>
+                        </nav>
+                            
+                        <div id="food"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Fashion</a>
+                        </nav>
+                            
+                        <div id="fashion"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Arts</a>
+                        </nav>
+                            
+                        <div id="arts"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Sports & Fitness</a>
+                        </nav>
+                            
+                        <div id="sports"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Film & Media</a>
+                        </nav>
+                            
+                        <div id="film"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+                    <div >
+                        <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+                            <a class='navbar-brand' href='#'>Charity & Causes</a>
+                        </nav>
+                            
+                        <div id="charity"> 
+                            <b>Coming Soon...</b>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+        <script>
+            getBox("loginbox");
+            getBox("signupbox");
+            getBox("supportbox");
+            showHead();
+            slideshow();
+            
+            var eventType = ["science","business","family","education","hobbies","music","health","community","food","fashion","arts","sports","film","charity"];
+            for (e of eventType){
+                showEvent(e,e);
+            }
+
+            
+            
+        </script>
+    </body>
+</html>

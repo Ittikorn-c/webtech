@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show event</title>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    .container-fluid{
+      padding-top: 2em;
+    }
+
+    .text-center{
+      background-color: #555;
+    }
+
+    .col-sm-8{
+      padding-top: 2em;
+
+      background-color: #262424;
+      color: white;
+    }
+
+    body{
+      background-color: black;
+    }
+
+      hr{
+        border-color: white;
+      }
+
+  		img{
+  			width: 50%;
+  		}
+
+  		iframe{
+  			width: 400px;
+  			height: 250px;
+  		}
+
+  		footer {
+     		background-color: #555;
+      	color: white;
+      	padding: 15px;
+    	}
+
+    	.comment{
+    		padding-top: 1em;
+    	}
+
+    	.comment-detail{
+    		padding-left: 4em;
+    	}
+
+	</style>
+</head>
+
+<body>
+	<nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+    <a class='navbar-brand' href='../home/index_user.html'>Get Event</a>
+
+    <!-- Links -->
+    <ul class='navbar-nav mr-auto'>
+    <li class='nav-item'>
+        
+    </li>
+    </ul>
+    <div id="buttonUser">
+
+    </div>
+</nav>
+
+  <div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+
+    </div>
+    <div class="col-sm-8 text-left">
+
+      <center><h1 name="eventName" id="eventName">Event name</h1></center>
+      <div class="event-detail">
+        <p id="eventSize">Event size: </p>
+        <p id="cat">Event Category: </p>
+        <p id="date">Date & Time</p>
+        <p id="location">Location: </p>
+
+        <p id="invitation">Invitation</p>
+      </div>
+
+      <center><img name="evPoster" id="poster"></center>
+      <div class="event-detail">
+        <p id="detail">Detail...</p>
+        <p id="pre-condition">Pre-condition: Please click this <a href="" id="condition">Link</a></p>
+      </div>
+
+      <center><iframe name="vidPromote" id="video" src=""></iframe></center>
+
+      <center><div id="map" style="width: 450px; height: 450px;"></div></center>
+
+      <div class="buy-ticket">
+      <hr>
+      <div class="ticket">
+        <h4>Ticket detail:</h4>
+        <p id="price">Price: </p>
+        
+        <form action="php/showEvent.php" method="POST">
+          <p align="right"><input type="submit" name="submit3" value="Join"></p>
+            <input type="text" name="join" id="join">
+        </form>
+      </div>
+    </div>
+
+    <div class="comment">
+          <hr>
+          <div class="comment-detail">
+            <h4>Leave a Comment:</h4>
+            <form role="form" method="POST" action="php/comment.php">
+              <div class="form-group">
+                  <textarea class="form" rows="4" cols=100% name="ment" required></textarea>
+              </div>
+              <button type="submit" name="submitMent">Submit</button>
+              <input type="text" name="idEvent" id="idEvent">
+            </form>
+          </div>
+          <hr>
+      </div>
+
+      <div id="showComment"></div>
+    </div>
+    <div class="col-sm-2 sidenav"></div>
+  </div>
+</div>
+
+	
+    <footer class="container-fluid">
+  		<p>Footer Text</p>
+	</footer>
+
+  <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="script/showEvent.js"></script>
+  <script>
+    showHead();
+    $(document).ready(()=>{
+      let $_GET = location.search.substr(1).split("&").reduce((o,i)=>(u=decodeURIComponent,[k,v]=i.split("="),o[u(k)]=v&&u(v),o),{});
+      console.log($_GET);
+      setID($_GET['event']);
+      getevent($_GET['event']);
+      showComment($_GET['event']);
+    });
+  </script>
+<!--   <script type="text/javascript" src="script/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="script/showEvent.js"></script> -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe16iun1hCxJzffuwFZf-2PyJJSZAwrP0&libraries=places&callback=initMap"></script>
+
+</body>
+</html> 

@@ -1,0 +1,483 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+body{
+  font-family: Raleway, sans-serif;
+  background-color: #474e5d;
+}
+.current-profile{
+  display: flex;
+}
+.pic{
+  margin: 5%;
+}
+.information{
+  color: white;
+  font-size: 30px;
+  display: flex;
+  padding: 60px 0px 0px 0px
+}
+.field-information{
+  margin-left: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 5% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 70%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+.popup .a-save {
+  position: relative;
+  top: 15px;
+  left: 50px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  background-color: #00FF33;
+  border-radius: 10px;
+  padding: 5px;
+}
+.popup .a-cancel {
+  position: relative;
+  top: 15px;
+  left: 50px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  background-color: #CC0033;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.popup .content {
+  max-height: 50%;
+  overflow: auto;
+}
+.overlay1 {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay1:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup1 {
+  margin: 150px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+.popup1 .content {
+  max-height: 50%;
+  overflow: auto;
+}
+.popup1 .a-save {
+  position: relative;
+  top: 15px;
+  left: 50px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  background-color: #00FF33;
+  border-radius: 10px;
+  padding: 5px;
+}
+.popup1 .a-cancel {
+  position: relative;
+  top: 15px;
+  left: 50px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  background-color: #CC0033;
+  border-radius: 10px;
+  padding: 5px;
+}
+#menuNform {
+  margin: 70px 400px;
+  position:relative;
+  box-sizing: content-box;
+  width: 1000px;
+  height: 800px;
+
+}
+#content-box{
+  width: 900px;
+  height: 600px;
+  background-color:  #006080;
+  border-radius: 0px 0px 10px 10px;
+}
+#menu,
+#menu ul,
+#menu ul li,
+#menu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+#menu:after,
+#menu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#menu {
+  width: 900px;
+  border-bottom: 3px solid #006080;
+  font-family: Raleway, sans-serif;
+  line-height: 2;
+}
+#menu ul {
+
+  background: #474e5d;
+}
+#menu > ul > li {
+  float: left;
+}
+#menu.align-center > ul {
+  font-size: 0;
+  text-align: center;
+}
+#menu.align-center > ul > li {
+  display: inline-block;
+  float: none;
+}
+#menu.align-right > ul > li {
+  float: right;
+}
+#menu.align-right > ul > li > a {
+  margin-right: 0;
+  margin-left: -4px;
+}
+#menu > ul > li > a {
+  z-index: 0;
+  padding: 18px 25px 12px 25px;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  margin-right: -4px;
+}
+#menu > ul > li.active > a,
+#menu > ul > li:hover > a,
+#menu > ul > li > a:hover {
+  color: #ffffff;
+}
+#menu > ul > li > a:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: "";
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: perspective(5px) rotateX(2deg);
+  -webkit-transform-origin: bottom;
+  -moz-transform: perspective(5px) rotateX(2deg);
+  -moz-transform-origin: bottom;
+  transform: perspective(5px) rotateX(2deg);
+  transform-origin: bottom;
+}
+#menu > ul > li.active > a:after,
+#menu > ul > li:hover > a:after,
+#menu > ul > li > a:hover:after {
+  background: #006080;
+}
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono');
+
+
+:root {
+  --purple: #892a92;
+  --purple2: #70217a;
+  --white: #f6d3fd;
+  --height: 222px;
+  --width: 350px;
+  --font: "Overpass Mono", monospaced;
+  --masterFont: "Raleway", sans-serif;
+}
+.frm2 {
+  --baseColor: #c2e59c;
+  margin: 0;
+  padding: 0;
+  background: var(--baseColor);
+  background: linear-gradient(to right, #64b3f4, var(--baseColor));
+
+}
+.card-r {
+  position: relative;
+  --heightCalc: - calc((var(--height) / 2) - 10px);
+  --widthCalc: calc(var(--width) / 2);
+  height: var(--height);
+  width: var(--width);
+  min-width: var(--width);
+  background: linear-gradient(90deg, var(--purple), var(--purple2));
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 0px auto;
+
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6));
+  transform: translateY(calc(50% - 10px));
+}
+
+.card__figure {
+  position: relative;
+  height: 40px;
+  margin: 0;
+}
+
+.card__figure::after {
+  content: "PLATINUM";
+  font-size: 0.45em;
+  letter-spacing: 4px;
+  color: var(--white);
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: calc(-100% - 15px);
+}
+
+.card__figure--logo {
+  --widthLogo: 130px;
+  width: var(--widthLogo);
+  position: absolute;
+  right: 50%;
+  transform: translate(calc(var(--widthLogo) / 2), 20px);
+}
+
+.card__number {
+  font-family: var(--font);
+  font-size: 1.15em;
+  font-weight: normal;
+  color: var(--white);
+  letter-spacing: 2.5px;
+  text-align: center;
+  margin-left: -110px;
+  margin-top: 80px;
+  z-index: 1;
+  position: relative;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.card__number::before,
+.card__number::after {
+  font-family: Arial;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.4em;
+  position: absolute;
+  letter-spacing: 0px;
+}
+
+.card__number:after {
+  content: "Expiry";padding: 5px 20px;
+  width: 80px;
+  transform: translate(-215px, 22px);
+}
+
+.card__dates {
+  position: absolute;
+  width: 40%;
+  font-size: .9em;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  font-family: var(--font);
+  bottom: 22%;
+  transform: translate(60px, 0px);
+}
+
+.card__dates span {
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.card__name {
+  font-family: var(--font);
+  font-size: .9em;
+  font-weight: normal;
+  color: var(--white);
+  letter-spacing: 2.5px;
+  transform: translate(35px, 25px);
+  position: relative;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.card__flag {
+  right: 30px;
+  top: 45%;
+  border-radius: 25px;
+  transform: translate(0, -28px);
+  position: absolute;
+  height: 110px;
+  width: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.card__flag--globe {
+  --margin: 5px;
+  width: calc(100% - (var(--margin) * 2));
+  background-color: #b7b2b8;
+  height: 50%;
+  border-radius: 20px;
+  margin: var(--margin);
+  background: repeating-linear-gradient(
+    0deg,
+    #dbd1dc,
+    #dbd1dc 5px,
+    #b2aab5 7px,
+    #b2aab5 5px
+  );
+}
+
+.card__flag--globe::after,
+.card__flag--globe::before {
+  content: "\f0ac";
+  font-family: FontAwesome;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 3em;
+  top: 6px;
+  left: 2px;
+  position: absolute;
+}
+
+.card__flag--globe::after {
+  transform: translateX(10px);
+}
+
+.card__flag--globe::before {
+  transform: translateX(25px);
+}
+
+.card__flag--red {
+  position: absolute;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ce0e1d;
+}
+
+.card__flag--yellow {
+  position: absolute;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e39833;
+}
+
+.card__flag--yellow::after {
+  content: "MasterCard";
+  position: absolute;
+  font-size: 0.7em;
+  top: 50%;
+  transform: translate(-25px, -7px);
+  font-family: var(--masterFont);
+  font-style: italic;
+  font-weight: 800;
+  color: var(--white);
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+.assign {
+  text-align: center;
+  margin-top: 113px;
+  font-family: var(--masterFont);
+  color: #fff;
+  font-size: 0.8em;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.assign a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.assign a:hover {
+  color: var(--purple);
+}
+
+textarea#Address {
+  width: 200px;
+  height: 100px;
+   resize: none;
+}
+.container-r{
+  display: flex;
+}
+.right-container-r{
+  margin: 0px 20%;
+}
+.left-container-r{
+  margin: 0px 1%;
+  width: auto;
+}
+.edit-button-r{
+  margin-left: 10%;
+  margin-top :10%;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #CCCCCC;
+
+
+}

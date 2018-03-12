@@ -1,0 +1,50 @@
+body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+.header{
+  padding: 2%;
+  border-bottom:  1px solid gray;
+  width: 82%;
+  margin-left: 8%;
+  color: white;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1150px;
+  width: 200%;
+  margin-top: 2%;
+  margin-inline-start: 12%;
+}
+
+.card{
+  width: 120%;
+  margin-bottom: 3%;
+}
+.row{
+  padding: 2%;
+}
+
+.col-xs-10 img{
+  width:200px;
+  height:220px;
+}
+.col-sm-8 {
+  position: absolute;
+  right: -16.5%;
+}
+.left {
+  width: 100%;
+  max-width: 40%;
+  padding-left: 53px;
+  margin-right: 50px;
+}
+.right{
+  width: 100%;
+  max-width: 40%;
+  padding-left: 53px;
+  margin-right: 30px;
+}

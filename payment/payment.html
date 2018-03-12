@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Payment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body style="padding: 50px">
+
+        <div class="container">
+          <!-- content -->
+
+          <div class="event-main-content">
+            
+          </div>
+
+          <form class="container" style="width: 860px; padding: 20px" action="payment.php" method="post">
+
+            <div>
+
+              <h2 class="text-center display-4">Ticket Buyer</h2>
+      
+              <div class="form-check" id='checkbox-form'>
+                <label class="form-check-label"><input type="checkbox" class="form-check-input" name='user-info' id='user-info-checkbox'>Use Ticket Buyer's Information</label>
+              </div>
+
+              <div class="form-inline" style="width: 860px; padding: 10px; margin-left: 50%; transform: translateX(-50%);">
+                <label for='fname' style="width: 125px">First name</label><input name='fname' id='fname' required="required" type="text" class="form-control" style="width: 250px"/>
+                <label for='lname' style="width: 125px">Last name</label><input name='lname' id='lname' required="required" type="text" class="form-control" style="width: 250px"/>
+              </div>
+    
+              <div class="form-inline" style="width: 860px; padding: 10px; margin-left: 50%; transform: translateX(-50%);">
+                <label for='email' style="width: 125px">Email</label><input name='email' id='email' required="required" type="email" class="form-control" style="width: 250px;"/>
+                <label for='tel' style="width: 125px">Phone number</label><input name='tel' id='tel' required="required" type="tel" class="form-control" maxlength="10" style="width: 250px"/>
+              </div>
+          
+            </div>
+
+            <div class="payment-method">
+
+              <h2 class="text-center display-4">Payment</h2>
+              <h5 class='text-center'>Credit Card</h5>
+              
+
+              <div style="padding: 10px" id='cc-form'>
+                <div class="form-inline" style="width: 860px; padding: 10px; margin-left: 50%; transform: translateX(-50%);">
+                  <label for='cc-num' style="width: 125px">Card Number</label><input name='cc-num' id="cc-number" type="text" placeholder="•••• •••• •••• ••••" required="required" class="form-control" maxlength="12" style="width: 250px"/>
+                  <label for='cc-name' style="width: 125px">Card Name</label><input name='cc-name' id="cc-name" type="text" placeholder="Card Holder's Name" required="required" class="form-control" style="width: 250px"/>
+                </div>
+                <div class="form-inline" style="width: 860px; padding: 10px; margin-left: 50%; transform: translateX(-50%);">
+                  <label for='cc-exp-date' style="width: 125px">Card Expiry Date</label><input name='cc-exp-date' id="cc-exp-date" type="text" placeholder="MM/YY" maxlength="5" required="required" class="form-control" style="width: 250px"/>
+                  <label for='cc-ccv' style="width: 125px">CVV</label><input name='cc-ccv' id="cc-ccv" type="password" placeholder="•••" required="required" class="form-control" maxlength='3' style="width: 250px"/>
+                </div>
+
+              <p class="text-center">
+                <img width="40" height="25" src="https://p-a.popcdn.net/assets/cards-logo/visa-04d47be1934571bc03df452d67c08aae.png" alt="Visa" />
+                <img width="40" height="25" src="https://p-a.popcdn.net/assets/cards-logo/mastercard-b50b7d43c54045e8be5f47e6f5542c92.png" alt="Mastercard" />
+                <img width="40" height="25" src="https://p-a.popcdn.net/assets/cards-logo/jcb-a86540236e5ea5c7fc3385fe3f0b3a37.png" alt="Jcb" />
+              </p>
+
+            </div>
+  
+            <hr>
+
+            <div>
+              <div class="text-right"><button class="btn btn-danger" id="cancel-btn">Cancel this Order</button>
+              <input class="btn btn-success" type="submit" value="Confirm" id="confirm-btn" style="width: 140px" /></div>
+            </div>
+
+          </div>
+
+        </form>   
+      </div>
+
+      <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+      <script src="payment.js"></script>
+
+</body>
+</html>

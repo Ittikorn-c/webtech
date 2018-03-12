@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="support_box" class="support-box">
+        <div class="modal3 support-content">
+            <form action="php/sentmail.php" method="POST">
+                <span id="close-support" class="close close-support">&times;</span>
+                <h1>Support</h1>
+                <p>You can sent mail to admin</p>
+                <div class="form-group">
+                    <label for="comment">email:</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Subject:</label>
+                    <textarea class="form-control" rows="1" name="subject"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Detail:</label>
+                    <textarea class="form-control" rows="5" name="detail"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">Success</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            console.log("OKOK11");
+            var pbtn = document.getElementById("pbtn");
+            var modal3 = document.getElementById("support_box");
+            var span3 = document.getElementById("close-support");
+            pbtn.onclick = function () {
+                modal3.style.display = "block";
+            }
+            span3.onclick = function () {
+                modal3.style.display = "none";
+            }
+            window.onclick = function (event) {
+                if (event.target == modal3) {
+                    modal3.style.display = "none";
+
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>

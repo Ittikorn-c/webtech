@@ -1,0 +1,50 @@
+<html>
+    <body>
+<div id="myModal" class="modal text-center">
+        <div class="modal-content" style="max-width: 330px;">
+            <form class="form-signin" action="php/check_login.php" method="POST">
+                <span id="close-log-in" class="close close-log-in">&times;</span>
+                <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    
+                <label for="inputEmail"  class="sr-only">Email address</label>
+                <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Email address" required="" autofocus="">
+    
+                <label for="inputPassword"  class="sr-only">Password</label>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required="">
+    
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                
+            </form>
+            <button class="btn btn-lg btn-primary btn-block " id="sign_up_btn">Sign up</button>
+            <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+        </div>   
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            console.log("OKOK");
+            var modal = document.getElementById('myModal');
+            var sbtn = document.getElementById('sign_up_btn');
+            var modal2 = document.getElementById('sign-up-box');
+            sbtn.onclick = function() {
+                modal.style.display = 'none';
+                modal2.style.display = 'block';
+            }
+            
+            var span = document.getElementsByClassName("close-log-in")[0];
+            span.onclick = function() {
+                    console.log("TTT");
+                    modal.style.display = "none"; 
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+
+                }
+            }
+
+        });
+    </script>
+</body>
+</html>

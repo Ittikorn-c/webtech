@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Events</title>
+  <meta charset="utf-8">
+  <script src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="participatedStyle.css">
+
+</head>
+<body>
+    <nav class='navbar navbar-expand-sm bg-dark navbar-dark'>
+          <a class='navbar-brand' href='../home/index_user.html'>Get Event</a>
+
+          <!-- Links -->
+          <ul class='navbar-nav mr-auto'>
+          <li class='nav-item'>
+              
+          </li>
+          </ul>
+          <div id="buttonUser">
+
+          </div>
+      </nav>
+
+  <div class="header">
+    <h1 id="header">Previous Events </h1>
+  </div>
+
+  <p style="text-align: right; margin-right: 10%; margin-top: 2%;">
+    <a href="report-fpdf.php" name='button' type='submit' class='btn btn-xs btn-secondary pull-right event-btn event-btn-small'>Download Report</a>
+  </p>
+
+  <div class="container" id="events">
+
+  </div>
+
+  <script type="text/javascript">
+    showHead();
+    showPEventO();
+  </script>
+
+  </body>
+</html>
