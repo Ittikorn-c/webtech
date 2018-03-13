@@ -2,6 +2,7 @@
 
 Present by GetA Group
   สร้างฐานข้อมูล ชื่อ getevent_database และ import sql เข้าไป
+  
   หน้า Home Page ของ website สามารถเข้าไปที่ folder home/index_user.html
 
 Directory
