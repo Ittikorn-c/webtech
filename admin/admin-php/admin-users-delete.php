@@ -10,17 +10,14 @@ if ($conn->connect_error) {
 } 
 $id = $_GET['q'];
 // sql to delete a record
-$sql1 = "DELETE FROM user WHERE user_id=$id";
+
 $sql2 = "DELETE FROM mailbox_support WHERE user_id=$id";
 $sql3 = "DELETE FROM userevent WHERE user_id=$id";
 $sql4 = "DELETE FROM userprofile WHERE user_id=$id";
 $sql5 = "DELETE FROM event_detail WHERE user_id=$id";
 $sql6 = "DELETE FROM event_comment WHERE user_id=$id";
-if ($conn->query($sql1) === TRUE) {
-    echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . $conn->error;
-}
+$sql1 = "DELETE FROM user WHERE user_id=$id";
+
 if ($conn->query($sql2) === TRUE) {
     echo "Record deleted successfully";
 } else {
@@ -42,6 +39,11 @@ if ($conn->query($sql5) === TRUE) {
     echo "Error deleting record: " . $conn->error;
 }
 if ($conn->query($sql6) === TRUE) {
+    echo "Record deleted successfully";
+} else {
+    echo "Error deleting record: " . $conn->error;
+}
+if ($conn->query($sql1) === TRUE) {
     echo "Record deleted successfully";
 } else {
     echo "Error deleting record: " . $conn->error;

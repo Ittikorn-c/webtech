@@ -11,7 +11,6 @@ if ($conn->connect_error) {
 
 $email = $_POST["email"];
 $password = $_POST["pwd"];
-$hash = password_hash( $password, PASSWORD_DEFAULT);
 $status = $_POST["status"];
 
 $firstname = $_POST["fn"];
@@ -23,7 +22,7 @@ $gender = $_POST["gender"];
 
 
 $sql = "INSERT INTO user (user_email, user_password, user_status)
-VALUES ('$email', '$hash', '$status')";
+VALUES ('$email', $password, '$status')";
 
 $sql2 = "INSERT INTO userprofile (user_firstname, user_lastname, phonenumber, birthday, address, gender)
 VALUES ('$firstname', '$lastname', '$phone', '$birthday', '$address', $gender)";
