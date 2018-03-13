@@ -2,6 +2,7 @@
 
 Present by GetA Group
 สร้างดาต้าเบส ชื่อ getevent_database และ import sql เข้าไป
+เข้าหน้าlogin โดยไปที่ folder home/user_index.html
 
 Build by
 1. HTML5
